@@ -1,0 +1,254 @@
+body {
+  background-color: #f1f1f1;
+  font-family: 'Poppins';
+}
+
+.navbar
+{
+  background-color:hsl(200, 19%, 18%) !important;
+  
+}
+.abcd
+{
+    width:100%;
+    height:auto;
+    background-color:#333;
+}
+.abcd img
+{
+    width:100%;
+    height:80vh;
+}
+@media screen and (max-width: 678px) {
+    .abcd
+    {
+        height:50vh !important;
+
+    }
+    .abcd img
+    {
+        height:50vh !important;
+    }
+    h1
+    {
+      font-size:7vw !important;
+    }
+    h2
+    {
+      font-size:6vw !important;
+    }
+    h3
+    {
+      font-size:5vw !important;
+    }
+    h4
+    {
+      font-size:4vw !important;
+    }
+    h5
+    {
+      font-size:3vh !important;
+    }
+    .section-head,.section-head1
+    {
+      height:24vw !important;
+
+    }
+}
+.carousel-caption
+{
+  position:absolute;
+  left:00px;
+  top:16vh;
+  width:100%;
+}
+
+
+.tab-card
+{
+    height:200px;
+}
+.service-image
+{
+    height:50px;
+    width:50px;
+    
+}
+.service-image1
+{
+  width:70%;
+  height:35vh;
+}
+.main-pointer
+{
+    background: rgba(248, 248, 248, 0.1) url(../img/back.jpeg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:#fff;
+
+}
+.main-pointer1
+{
+    background: rgba(255, 255, 255, 0.1) url(../img/a.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:#fff;
+
+}  
+
+.section-head
+{
+  background: rgba(0, 0, 0, 0.9) url(../img/a.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:#fff;
+    width:100%;
+    height:20vw;
+
+}
+.section-head1
+{
+  background: rgba(0, 0, 0, 0.6);
+    
+    width:100%;
+    height:20vw;
+
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.single-services h4
+{
+  color:#444;
+}
+.single-services a:hover h4 
+{
+  color:blue;
+}
+
+.list-item li
+{
+  border-bottom :01px solid #333;
+} 
+
+.list-group a
+{
+  color:#333;
+}
+
+.btn-zampa
+{
+  width:50%;
+  font-size:20px;
+  border-radius:08px;
+
+
+}
+.borderright
+{
+  border-right : 01px solid #333;
+}
+.client-text img
+{
+  height:200px;
+  width:200px;
+  margin:10px 10px 10px 10px;
+  
+}
+.client-text:hover , :focus
+{
+  color:blue;
+  
+}
+.avatar img
+{
+  width:200px;
+  height:200px;
+}
+.single-icon i {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #444;
+  line-height: 46px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
