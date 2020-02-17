@@ -1,6 +1,7 @@
 body {
   background-color: #f1f1f1;
   font-family: 'Poppins';
+  width:99.9%;
 }
 
 .navbar
@@ -12,7 +13,7 @@ body {
 }
 .navbar-nav
 {
-  padding-left:100px;
+  padding-left:200px;
 }
 
 .navbar-light .navbar-brand {
@@ -20,6 +21,17 @@ body {
 }
 .navbar-nav .nav-item .nav-link {
   color: #fff !important;
+}
+.label-text
+{
+  padding:00px;
+  margin-top:-30px;
+  font-size:1vw;
+}
+.main_image
+{
+  width:25vw;
+  height:10vh;
 }
 .abcd
 {
@@ -80,6 +92,11 @@ body {
     {
       height:24vw !important;
 
+    }
+    .main_image
+    {
+      width:45vw;
+      height:10vh;
     }
     
 }
