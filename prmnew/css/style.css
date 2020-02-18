@@ -12,13 +12,7 @@ body {
   
   
 }
-.navbar .abcd1
-{
-  position:absolute;
-  top:0px;
-  left:0px;
-  z-index:9;
-}
+
 .navbar-nav
 {
   padding-left:200px;
@@ -47,6 +41,15 @@ body {
     width:100%;
     height:auto;
     background-color:#333;
+}
+.abcd1
+{
+    
+    width:100%;
+    height:auto;
+    color:#fff;
+    background: rgba(14, 90, 141, 0.8) url(../img/back5.png);
+    background-size:100%;
 }
 .abcd img
 {
