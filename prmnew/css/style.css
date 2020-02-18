@@ -4,12 +4,20 @@ body {
   width:99.9%;
 }
 
+
 .navbar
 {
   background-color: #333;
   color:#fff !important;
   
   
+}
+.navbar .abcd1
+{
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:9;
 }
 .navbar-nav
 {
@@ -35,6 +43,7 @@ body {
 }
 .abcd
 {
+    
     width:100%;
     height:auto;
     background-color:#333;
@@ -42,7 +51,13 @@ body {
 .abcd img
 {
     width:100%;
-    height:80vh;
+}
+.carousel-caption
+{
+  position:absolute;
+  left:00px;
+  top:10vw;
+  width:100%;
 }
 
 @media screen and (max-width: 768px)
@@ -61,12 +76,14 @@ body {
 @media screen and (max-width: 678px) {
     .abcd
     {
-        height:50vh !important;
+        width:100%;
+        height:auto !important;
 
     }
     .abcd img
     {
-        height:50vh !important;
+        width:100%;
+        height:100%;
     }
     h1
     {
@@ -100,13 +117,7 @@ body {
     }
     
 }
-.carousel-caption
-{
-  position:absolute;
-  left:00px;
-  top:16vh;
-  width:100%;
-}
+
 
 
 .tab-card
