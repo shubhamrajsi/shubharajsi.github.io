@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="zc-html">
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      border-radius:08px;
+      display:inline-block;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+    .card1
+    {
+      width:200px;
+      background-color:#333;
+      color:#fff;
+      fontSize:16px;
+    }
+    h4
+    {
+      font-size:40px;
+    }
+  </style>
+</head>
+​
+
+<body>
+  <div class="row">
+    ​<div class="col-sm-4">
+      <div id="myChart" class="chart--container">
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    // CHART CONFIG
+    // -----------------------------
+    var neha = 'shubham';
+    var names = ['Value','Future','Past','Health','Divident'];
+    var nums = ['one','two','three','four','five']
+    var analysis = [3,4,5,3,4]
+    var one = [1,0,0,0,1,0,1];;
+    var two = [1,0,1,1,0,1,0];
+    var three = [1,1,1,0,1,1];
+    var four = [0,0,1,1,0,1,0];
+    var five = [1,0,0,0,1,1,1];
+  
+    var x = ''
+
+
+    // background color of radar chart
+    var backcolor ='';
+    let stock_type="equity";
+    if(stock_type =='equity')
+    {
+      backcolor='rgba(255,165,0,0.6)';
+    }
+    else if(stock_type == 'currency')
+    {
+      backcolor ='blue';
+    }
+    else
+    {
+      backcolor='red';
+    }
+    
+    
+    // var options = `${x} ${x == '%k' ? 'harami' : `<div class="card"><img src=${one[0]}.png><img src=${one[1]}.png><img src=${one[2]}.png><img src=${one[3]}.png><img src=${one[4]}.png></div>`}`;  
+    let chartConfig = {
+      type: 'radar',
+      backgroundColor: 'rgba(0,0,0,0)',
+      // backgroundColor: '#262626 #424242'
+      plot: {
+        "data-anything": [`1 | %k<br><h5>this is the description text<h5><br><div class="card1 pt-1 pb-1"><h3>Analysis Check : ${analysis[0]}/6</h3><img src=./image/${one[0]}.png>&nbsp;<img src=./image/${one[1]}.png>&nbsp;<img src=./image/${one[2]}.png>&nbsp;<img src=./image/${one[3]}.png>&nbsp;<img src=./image/${one[4]}.png>&nbsp;<img src=./image/${one[5]}.png></div>`,
+
+          `2  | %k<br><h5>this is the description text</h5><br><div class="card1 pt-1 pb-1"><h3>Analysis Check : ${analysis[1]}/6</h3><img src=./image/${two[0]}.png>&nbsp;<img src=./image/${two[1]}.png>&nbsp;<img src=./image/${two[2]}.png>&nbsp;<img src=./image/${two[3]}.png>&nbsp;<img src=./image/${two[4]}.png>&nbsp;<img src=./image/${two[5]}.png></div>`, 
+
+          `3  | %k<br><h5>this is the description text</h5><br><div class="card1 pt-1 pb-1"><h3>Analysis Check : ${analysis[2]}/6</h3><img src=./image/${three[0]}.png>&nbsp;<img src=./image/${three[1]}.png>&nbsp;<img src=./image/${three[2]}.png>&nbsp;<img src=./image/${three[3]}.png>&nbsp;<img src=./image/${three[4]}.png>&nbsp;<img src=./image/${three[5]}.png></div>`, 
+
+          `4  | %k<br><h5>this is the description text</h5><br><div class="card1 pt-1 pb-1"><h3>Analysis Check : ${analysis[3]}/6</h3><img src=./image/${one[0]}.png>&nbsp;<img src=./image/${four[1]}.png>&nbsp;<img src=./image/${four[2]}.png>&nbsp;<img src=./image/${four[3]}.png>&nbsp;<img src=./image/${four[4]}.png>&nbsp;<img src=./image/${four[5]}.png></div>`,
+
+           `5  | %k<br><h5>this is the description text</h5><br><div class="card1 pt-1 pb-1"><h3>Analysis Check : ${analysis[4]}/6</h3><img src=./image/${five[0]}.png>&nbsp;<img src=./image/${five[1]}.png>&nbsp;<img src=./image/${five[2]}.png>&nbsp;<img src=./image/${five[3]}.png>&nbsp;<img src=./image/${five[4]}.png>&nbsp;<img src=./image/${five[5]}.png></div>`],
+
+        tooltip: {
+          text : '%data-anything',
+          // "text": `${!'%i' ? 'harami' : `%k<div class="card"><img src=${one[0]}.png><img src=${one[1]}.png><img src=${one[2]}.png><img src=${one[3]}.png><img src=${one[4]}.png></div>`}`,
+          'html-mode': true,
+          "background-color": "#333",
+          "border-width": 1,
+          "border-color": "black",
+          "border-radius": "9px",
+          "fontSize": "21px",
+          "text-align":"left",
+          "font-family":"Arial",
+          "callout": true
+        },
+        // hoverState :{
+        //   alpha : 0.3,
+        //   backgroundColor:'red',
+
+        // }
+      },
+      fillAngle: 0,
+      scaleK: {
+        values: names,
+        aspect: 'circle',
+        guide: {
+          alpha:0.9,
+          lineColor: '#424242',
+          lineWidth: '10px',
+        },
+        item: {
+          alpha: 0.8,
+          bold: true,
+          fontColor: '#262626',
+          fontFamily: 'Arial',
+          fontSize: '16px',
+          lineWidth: '10px',
+          offsetR: '5px',
+          
+        },
+        tick: {
+          alpha:1,
+          lineColor: '#fff',
+          lineWidth: '5px',
+          size: '0px'
+        }
+      },
+      scaleV: {
+        item: {
+          visible: false
+        },
+        values: '0:30000:5000',
+        lineColor:'transparent',
+        guide: {
+          alpha: 0,
+          items: [{
+              alpha: 0.9,
+              backgroundColor: '#424242'
+            },
+            {
+              alpha: 0.7,
+              backgroundColor: '#262626'
+            }
+          ],
+          
+        }
+      },
+      series: [
+        {
+          text: 'Budget',
+          aspect:'rose',
+          alpha:0.15,
+          backgroundColor:backcolor,
+          values: [22000, 27500, 23250, 25000, 19500],
+          alpha: 0.5,
+          legendMarker: {
+            type: 'circle',
+            alpha: 0.8,
+            backgroundColor: '#BE462C',
+            borderColor: '#fff',
+            borderWidth: '1px',
+            size: '5px'
+          },
+          lineColor: backcolor,
+          lineWidth: '4px',
+          
+          marker: {
+            alpha: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#fff',
+            borderWidth: '0px',
+            size: '0px'
+          },
+          shadow: false
+        }
+      ]
+    };
+
+    // RENDER CHARTS
+    // -----------------------------
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig
+    });
+    
+  </script>
+ 
+</body>
+
+</html>
